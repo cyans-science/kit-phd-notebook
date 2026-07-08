@@ -20,8 +20,10 @@ title: Idea Note
 
         <p class="date">{{ post.date | date: "%Y-%m-%d" }}</p>
 
-        {% if post.summary %}
-          <p class="summary">{{ post.summary }}</p>
+        {% assign clean_summary = post.summary | default: "" | strip %}
+
+        {% if clean_summary != "" %}
+          <p class="summary">{{ clean_summary }}</p>
         {% endif %}
 
         {% if post.tags %}
