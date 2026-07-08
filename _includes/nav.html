@@ -11,11 +11,16 @@
 
   <a href="{{ '/papers/' | relative_url }}"
      class="{% if page.url contains '/papers/' or page.category == 'papers' %}active{% endif %}">
-    Paper Notes
+    Paper Note
   </a>
 
   <a href="{{ '/rewrites/' | relative_url }}"
      class="{% if page.url contains '/rewrites/' or page.category == 'rewrites' %}active{% endif %}">
     Rewrites
+  </a>
+
+  <a href="{{ '/ideas/' | relative_url }}"
+     class="{% if page.url contains '/ideas/' or page.category == 'ideas' %}active{% endif %}">
+    Idea Note
   </a>
 </nav>
